@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="iTJSpHmrrm5pwboorqL8Abf2tzkMTTx8WmsEDiBG5CU" />
+    <meta name="description" content=" I'm a Programmer, Web designer, and Artist in India ">
+    <meta name="keywords" content="Programmer Web-Designer Artist Developer">
+    <meta name="author" content="Amjad's portfolio">
+    <title>Amjad's Portfolio</title>
+
+    
+  <!-- Meta Tag For Social Media-->
+  <meta property="og:site_name" content="Amjad's Portfolio">
+  <meta property="og:description" content="I'm a Programmer, Web designer, and Artist in India">
+
+  <style>
+    /* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root{
+  --primary-color: hsl(213, 19%, 88%);
+  --secondary-color: #1d1b1c;
+  --secondary-btn-color: #e4e8ee;
+  --text-color: rgb(85, 85, 85);
+
+    
+}
+.dark-theme{
+
+  --primary-color: hsl(216, 35%, 8%);
+  --secondary-color: #ced4e4;
+  --secondary-btn-color: #b9c6e9;
+  --text-color: #646f8b;
+}
+.theme{
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: var(--text-color);
+}
+/*Type Animation*/
+.typewrite{
+  text-decoration: none;
+  
+}
+.typewrite > .wrap {
+  height: 10px;
+   border-right: 0.09em solid var(--secondary-color)}
+.typewrite:hover{
+  text-decoration: none;
+}
+.wrap{
+ color: var(--text-color);
+}
+
+
+/* TRANSITION */
+a{
+  color: var(--secondary-color);
+}
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+.space{
+    height: 17vh;
+}
+
+/* DESKTOP NAV */
+#desktop-nav {
+    background-color: var(--primary-color); /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    z-index: 2;
+ 
+  }
+  
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+    background-color: var(--primary-color); /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    z-index: 2;
+  }
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin: 0.5rem;
+  border-radius: 1.5rem;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+.section-pic-background{
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom right, rgb(208 210 217),rgb(202, 222, 236));
+}
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 1.5rem;
+}
+.icons{
+    cursor: pointer;
+    font-size: 1.5rem;   
+    color: var(--secondary-color);
+}
+
+.icon-x{
+    height: 1.15rem;
+    cursor: pointer;
+
+}
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: var(--secondary-btn-color);
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+  font-size: 2rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: var(--primary-color);
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 84%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: var(--primary-color);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: var(--text-color);
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 17rem;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+  #contact,
+  #projects {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+}
+
+  </style>
+    <link rel="icon" type="image/x-icon" href="assets/icon.png">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  </head>
+  <body class="dark-theme">
+    <nav id="desktop-nav">
+      <div class="logo">Amjad Sinan Pc</div>
+      <div>
+   
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li>      
+            <i class="uil uil-sun theme" id="theme"></i>
+ <!--           <i class="uil uil-sun"></i>-->
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Amjad Sinan Pc</div>
+      <span></span>
+      <i class="uil uil-sun  theme" id="theme-ham"></i>
+ <!--     <i class="uil uil-sun"></i>-->
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="index.html#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+        
+      </div>
+    </nav>
+    <div class="space"></div>
+    <section id="profile">
+      <div class="section__pic-container">
+        <div class="section-pic-background">
+            <img src="assets/WhatsApp Image 2025-03-04 at 23.16.55_af7bfc19.jpg" alt="Amjad's Picture">
+        </div>
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Amjad Sinan Pc</h1>
+        <p class="section__text__p2"><a class="typewrite" data-period="2000" data-type='[ "Web Developer", "Front-End Dev", "CyberSecurity","Ethical Hacker","Artist" ]'>
+          <span class="wrap"></span>
+        </a></p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Green Geometric Content Creator Resume (1).pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+            <a href="https://www.linkedin.com/in/amjad-sinan-638104331/"><i class="uil uil-linkedin-alt icons"></i></a>
+            <a href="https://github.com/amjadsinan"><i class="uil uil-github icons"></i></a>
+            <a href="https://developers.google.com/profile/u/112115757797360375976"><i class="uil uil-google icons"></i></a>
+            <a href="https://www.instagram.com/amjjjjjddd/"><i class="uil uil-instagram icons"></i></a>
+            <a href="https://x.com/Calvaniccu"><img class="icon-x" src="assets/logo-white.png" id="x" alt=""></a>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("desktop-nav").style.top = "0";
+    document.getElementById("hamburger-nav").style.top = "0";
+  } else {
+    document.getElementById("desktop-nav").style.top = "-200px";
+    document.getElementById("hamburger-nav").style.top = "-200px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+var theme = document.getElementById("theme")
+var theme_ham = document.getElementById("theme-ham")
+var x = document.getElementById('x')
+theme.onclick = function(){
+  document.body.classList.toggle("dark-theme");
+  if(document.body.classList.contains("dark-theme")){
+
+    theme.classList.remove("uil-moon");
+    theme.classList.add("uil-sun");
+    x.src = "./assets/logo-white.png"
+  }else{
+    theme.classList.remove("uil-sun");
+    theme.classList.add("uil-moon");
+    x.src = "./assets/logo-black.png"
+  }
+}
+theme_ham.onclick = function(){
+  document.body.classList.toggle("dark-theme");
+  if(document.body.classList.contains("dark-theme")){
+
+    theme_ham.classList.remove("uil-moon");
+    theme_ham.classList.add("uil-sun");
+    x.src = "./assets/logo-white.png"
+  }else{
+    theme_ham.classList.remove("uil-sun");
+    theme_ham.classList.add("uil-moon");
+    x.src = "./assets/logo-black.png"
+  }
+}
+
+
+var TxtType = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+  this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+  this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 200 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+  delta = this.period;
+  this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+  this.isDeleting = false;
+  this.loopNum++;
+  delta = 500;
+  }
+
+  setTimeout(function() {
+  that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('typewrite');
+  for (var i=0; i<elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-type');
+      var period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        new TxtType(elements[i], JSON.parse(toRotate), period);
+      }
+  }
+};
+    </script>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="assets/WhatsApp Image 2025-02-10 at 23.11.16_cccc2bf9.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <i class="uil uil-award icons"></i>
+              <h3>Experience</h3>
+              <p>Early Career <br />(0 -5 year)</p>
+            </div>
+            <div class="details-container">
+              <i class="uil uil-book-medical icons"></i>
+              <h3>Education</h3>
+              <p>Bachelor's of Computer Application<br />2nd Year(appearing)</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              <ul>
+                <li>Developed and implemented several websites, and participated 
+                 in several hackhathon programs, resulting in the college
+                    receiving an accreditation of A++ in the NAAC cycle</li>
+                <li>Conducted thorough testing and debugging for the programs
+                    developed</li>
+                    <li>Basic experience in CyberSecurity</li>
+                <li>Has a good grasp over Kali Linux</li>
+                <li>Efficiently uses a wide variety of programming languages with a
+                    special focus on Java,C,Sql and C++</li>
+                <li>Knows front end coding using CSS, HTML and Java script
+                </li>
+              </ol>
+            </p>
+          </div>
+        </div>
+      </div>
+      <i class="uil uil-angle-double-down arrow" onclick="location.href='./#experience'"></i>
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <i class="uil uil-check-circle icons"></i>
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <i class="uil uil-check-circle icons"></i>
+                <div>
+                  <h3>CSS</h3>
+                  <p>Beginer</p>
+                </div>
+              </article>
+              <article>
+                <i class="uil uil-check-circle icons"></i>
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">CyberSecurity</h2>
+            <div class="article-container">
+              <article>
+                <i class="uil uil-check-circle icons"></i>
+                <div>
+                  <h3>MetaSploitable</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <i class="uil uil-check-circle icons"></i>
+                <div>
+                  <h3>Nmap</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <i class="uil uil-check-circle icons"></i>
+                <div>
+                  <h3>Linux</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <i class="uil uil-check-circle icons"></i>
+                <div>
+                  <h3>WireShark</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <i class="uil uil-angle-double-down arrow" onclick="location.href='./#projects'"></i>
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="assets/Screenshot 2025-02-10 231950.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Personal Portfolio</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/amjadsinan/Amjad-s-portfolio'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://amjadsinan-portfolio.netlify.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/amjadsinan'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <i class="uil uil-angle-double-down arrow" onclick="location.href='./#contact'"></i>
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          
+          <i class="uil uil-envelope-check icons"></i>
+          <p><a href="mailto:amjadsinananusinu@gmail.com"></a>amjadsinananusinu@gmail.com</p>
+          <br>
+        </div>
+        <div class="contact-info-container">
+          
+            <i class="uil uil-linkedin icons"></i>
+          <p><a href="https://www.linkedin.com/in/amjad-sinan-638104331/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Amjad Sinan. All Rights Reserved.</p>
+    </footer>
+
+  </body>
+</html>
